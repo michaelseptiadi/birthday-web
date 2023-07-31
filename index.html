@@ -76,6 +76,30 @@ li span {
     font-size: calc(3.375rem * var(--smaller));
   }
 }
+@media all and (min-width: 768px) {
+  body{
+    display: flex;
+  }
+  .section-menu{
+    margin-top: 48px;
+  }
+  .maps-button{
+    height: 64px;
+    width: 256px;
+    padding: 64px 128px;
+    font-size: 24px;
+  }
+  li{
+    font-size: 24px;
+    padding: 1rem;
+  }
+  li > span{
+    font-size: 36px;
+  }
+  .img-container{
+    margin-top: 48px;
+  }
+}
 .zoom-in-out-box {
   background: #f9f5f2;
   animation: zoom-in-zoom-out 5s ease-in-out;
@@ -116,6 +140,16 @@ li span {
     h1{
       text-align: center;
     }
+    .circle{
+      height: 12px;
+      width: 120px;
+      background-color: #000;
+      border-radius: 25px;
+      margin: 0 auto 16px;
+    }
+    p{
+      color: #926016;
+    }
     </style>
   </head>
   <body>
@@ -133,9 +167,13 @@ li span {
           <li><span id="seconds"></span>Seconds</li>
         </ul>
       </div>
-    </div>
-    <div class="section">
-      <a target="_blank" class="maps-button" href="https://goo.gl/maps/Wc1TbSKtfrkTiRqT6">See the location</a>
+      <div class="dresscode">
+        <h1 id="headline" style="font-weight: bolder;">Dresscode<br/><span style="font-weight: 100; font-size: 16px;">Black</span></h1>
+        <div class="circle"></div>
+      </div>
+      <div class="section">
+        <a target="_blank" class="maps-button" href="https://goo.gl/maps/Wc1TbSKtfrkTiRqT6">See the location</a>
+      </div>
     </div>
     <div class="section-menu">
       <h1 id="headline" style="margin-bottom: 24px;">Choose your food</h1>
