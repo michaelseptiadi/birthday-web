@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Loisa's Birthday</title>
+    <style>
+:root {
+  --smaller: .75;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background-color: #f9f5f2;
+  font-family: -apple-system, 
+    BlinkMacSystemFont, 
+    "Segoe UI", 
+    Roboto, 
+    Oxygen-Sans, 
+    Ubuntu, 
+    Cantarell, 
+    "Helvetica Neue", 
+    sans-serif;
+}
+
+.container {
+  color: #333;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h1 {
+  font-weight: normal;
+  letter-spacing: 0.125rem;
+  text-transform: uppercase;
+}
+
+li {
+  display: inline-block;
+  font-size: 1.5em;
+  list-style-type: none;
+  padding: 1em;
+  text-transform: uppercase;
+}
+
+li span {
+  display: block;
+  font-size: 4.5rem;
+}
+
+@media all and (max-width: 768px) {
+  h1 {
+    font-size: calc(1.5rem * var(--smaller));
+  }
+  
+  li {
+    font-size: calc(1.125rem * var(--smaller));
+  }
+  
+  li span {
+    font-size: calc(3.375rem * var(--smaller));
+  }
+}
+
+.rotate-center {
+	-webkit-animation: rotate-center 2s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+	        animation: rotate-center 2s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+}
+
+@-webkit-keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+    .maps-button{
+      border: 2px solid #926016;
+      border-radius: 25px;
+      padding: 12px 24px;
+      text-decoration: none;
+      color: black;
+      margin-bottom: 36px;
+    }
+    .section{
+      display: flex;
+      justify-content: center;
+    }
+    .container{
+      margin-top: 48px;
+    }
+    .img-container{
+      height: 80%;
+    }
+    li, .maps-button, #headline{
+      color: #926016;
+    }
+    h1{
+      text-align: center;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="img-container rotate-center">
+        <img src="flyer.jpeg" alt="flyer" class="img-fluid">
+    </div>
+    <div class="container">
+      <h1 id="headline" style="font-weight: bolder;">Saturday, August 5 @7PM</h1>
+      <h1 id="headline">Countdown</h1>
+      <div id="countdown">
+        <ul>
+          <li><span id="days"></span>days</li>
+          <li><span id="hours"></span>Hours</li>
+          <li><span id="minutes"></span>Minutes</li>
+          <li><span id="seconds"></span>Seconds</li>
+        </ul>
+      </div>
+    </div>
+    <div class="section">
+      <a target="_blank" class="maps-button" href="https://goo.gl/maps/Wc1TbSKtfrkTiRqT6">See the location</a>
+    </div>
+    <div class="section-menu">
+      <h1 id="headline" style="margin-bottom: 24px; font-weight: 400;">Choose your food</h1>
+      <img src="menu.jpeg" alt="menu" width="100%" height="100%">
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script>
+      var countDownDate = new Date("Aug 5, 2023 19:00:00").getTime();
+      var x = setInterval(function() {
+
+        // Get today's date and time
+        var now = new Date().getTime();
+
+        // Find the distance between now and the count down date
+        var distance = countDownDate - now;
+
+        // Time calculations for days, hours, minutes and seconds
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // Display the result in the element with id="demo"
+        document.getElementById("days").innerHTML = days
+        document.getElementById("hours").innerHTML = hours
+        document.getElementById("minutes").innerHTML = minutes
+        document.getElementById("seconds").innerHTML = seconds
+
+        // If the count down is finished, write some text
+      }, 1000);
+    </script>
+  </body>
+</html>

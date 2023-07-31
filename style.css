@@ -1,0 +1,39 @@
+body{
+    background-image: url('background.jpg') ;
+    background-size: 100%;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 800px;
+    background-color: rgb(121, 121, 188);
+    margin-top: 500px;
+    margin-left: 320px;
+    box-shadow:0 11px 15px -7px rgba(0,0,0,.2), 0 24px 38px 3px rgba(0,0,0,.14), 0 9px 46px 8px rgba(0,0,0,.12);
+    border-radius: 20px;
+    border: 10px solid pink;
+}
+
+h1{
+    color: pink;
+}
+
+p{
+    font-size: 48px;
+    color: pink;
+    font-weight: bolder;
+}
+
+img{
+    position: fixed;
+    height: 300px;
+    width: auto;
+    top: 160px;
+    left: 100px;
+    border-radius: 25px;
+    box-shadow:0 11px 15px -7px rgba(0,0,0,.2), 0 24px 38px 3px rgba(0,0,0,.14), 0 9px 46px 8px rgba(0,0,0,.12);
+}
